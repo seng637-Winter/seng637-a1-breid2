@@ -1,0 +1,290 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project lead id,Project description,Priority,Resolution,Assignee,Assignee Id,Reporter,Reporter Id,Creator,Creator Id,Created,Updated,Last Viewed,Resolved,Fix versions,Due date,Votes,Labels,Labels,Description,Environment,Watchers,Watchers Id,Original estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Attachment,Custom field (Actual end),Custom field (Actual start),Custom field (Atlas project key),Custom field (Atlas project status),Custom field (Change reason),Custom field (Change risk),Custom field (Change type),Custom field (Development),Custom field (Epic Color),Custom field (Epic Name),Custom field (Epic Status),Custom field (Fix Version),Custom field (Found in version),Custom field (Found in version:),Custom field (Impact),Custom field (Issue color),Custom field (Locked forms),Custom field (Open forms),Custom field (Rank),Custom field (Request Type),Custom field (Severity),Custom field (Severity),Custom field (Start date),Custom field (Story Points),Custom field (Story point estimate),Custom field (Submitted forms),Custom field (Target end),Custom field (Target start),Custom field (Team),Custom field (Time),Custom field (Total forms),Custom field ([CHART] Date of First Response),Comment,Status Category,Status Category Changed
+System Fails to allow the user to check the Savings account,SENG637A1-23,10022,Bug,Resolved,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Medium,,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,04/Feb/24 7:51 PM,04/Feb/24 7:58 PM,05/Feb/24 10:01 AM,,ATM System - Lab 1 Version 1.1,,0,,,,,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Significant / Large,,,,0|i0003j:,,,Medium,,,,,,,,,,,"04/Feb/24 7:57 PM;712020:eee6899a-a509-4f17-b31e-e2510927dc88;The system after selecting balance inquiry fails to allows the user to check the savings account. The system only shows the other two account's.
+
+
+
+Initial state:
+System allows the user to check balance inquiry. On selection the system shows two accounts missing the savings account. 
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter an incorrect PIN ‘xxx’
+# Select “Balance Inquiry”
+
+Expected behavior:
+
+System should show three accounts for the user to inquire about.
+
+Actual behavior:
+
+The system shows two accounts for the user to select missing the savings account. 
+
+Test Case: 33 of the listed tests",In Progress,04/Feb/24 7:58 PM
+Typo on ATM display of withdrawal amounts.,SENG637A1-22,10021,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Low,Done,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,04/Feb/24 3:14 PM,04/Feb/24 3:33 PM,05/Feb/24 10:01 AM,04/Feb/24 3:14 PM,,,0,typo,withdraw,"TYPO Correction
+
+After the withdrawal option is selected, there is a typo on the displayed withdrawal amounts. The display does not have a dollar sign in front of the amount for option 3, ‘3) 60’.",,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,,,,,,,,,04/Feb/24 3:33 PM;ug:568813b1-d3c9-4454-a3aa-698ac1907d7b;typo.png;https://ucalgary-team-seng637-group7.atlassian.net/rest/api/3/attachment/content/10000,,,,,,,,,,,,,ATM System - Lab 1 Version 1.1,,Extensive / Widespread,,,,0|i0003b:,,,Low,,,,,,,,,,,,Done,04/Feb/24 3:14 PM
+"After one withdrawal transaction, system does not take keyboard input.",SENG637A1-21,10020,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Medium,Done,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,04/Feb/24 3:04 PM,04/Feb/24 3:11 PM,05/Feb/24 10:01 AM,04/Feb/24 3:04 PM,ATM System - Lab 1 Version 1.1,,0,withdraw,,"After one withdrawal transaction and the user is prompted whether they would like to make another, the keyboard input does not work. The user must click on the simulated keypad.
+
+Initial state:
+The ATM displays two options to the user, 1) Yes (to make another transaction) or 2) No (to not make another transaction).
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter the PIN ‘42’ using the simulated keypad.
+# Select the withdraw option by clicking ‘1’ on the simulated keypad.
+# Choose to withdrawal from checking account by clicking ‘1’ again on the simulated keypad.
+# Select an amount that the system currently has and which is not greater than the account balance.
+# Attempt to press ‘1' or '2’ on the keyboard when prompted about making another transaction.
+# Click '2’ on the simulated keypad to conclude the session.
+# Power off the ATM by clicking the ‘Off’ button.
+
+Expected behavior:
+The system recognizes the keyboard input of ‘1' or '2’ and either allows another transaction to be made or conclude the session, respectively.
+
+Actual behavior:
+The system does not recognize the keyboard input. The user must click on the ‘1' or '2’ button on the simulated keypad to either make another transaction or end the session, respectively.",,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Extensive / Widespread,,,,0|i00033:,,,Low,,,,,,,,,,,,Done,04/Feb/24 3:04 PM
+Wrong dollar amount withdrawn from the ATM; displays incorrectly on receipt and log,SENG637A1-20,10019,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Highest,Done,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,04/Feb/24 2:53 PM,04/Feb/24 3:20 PM,05/Feb/24 10:01 AM,04/Feb/24 2:53 PM,ATM System - Lab 1 Version 1.1,,0,withdraw,,Example: Withdrawal of $20 from checking account results in $40 withdrawn from the ATM. Both the receipt and log record $40 instead of $20.,,Carissa Chung,712020:d23d960b-0bc3-4284-97dd-6fc979ae00ab,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Extensive / Widespread,,,,0|i0002v:,,,Critical,,,,,,,,,,,,Done,04/Feb/24 2:53 PM
+The reentering of the pin does not get the user into the menu screen.,SENG637A1-19,10018,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Medium,Done,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,02/Feb/24 11:13 AM,04/Feb/24 8:25 PM,05/Feb/24 10:01 AM,02/Feb/24 11:13 AM,,,0,,,"The system after entering an incorrect pin asks the user to reenter the pin for that card. On entering the correct pin, the system asks the user to once again enter the pin. Then final the second time the system grants access. 
+
+Initial state:
+The system is asking the user for the correct pin after entering it in wrong the first time.
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter an incorrect PIN ‘xxx’
+# Reenter the correct pin “42”
+# Reenter the correct pin “42
+
+Expected behavior:
+After giving the correct pin the system should allow access. 
+
+Actual behavior:
+The system asks the user twice for the correct pin before allowing access to the system. 
+
+Test Case: 37, 39, and 40 of the listed tests",,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Moderate / Limited,,,,0|i0002n:,,,Low,,,,,,,,,,,,Done,02/Feb/24 11:13 AM
+Inquiry from Checking Account,SENG637A1-18,10017,Bug,Resolved,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Low,,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,02/Feb/24 10:46 AM,03/Feb/24 5:52 PM,05/Feb/24 10:01 AM,,ATM System - Lab 1 Version 1.1,,0,,,"The system after selecting Money Account proceeds to show the saving account balance in the receipt. 
+
+Initial state:
+The system asks the user for the account to inquire from, user selects “Checking”
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter an incorrect PIN ‘42’ using the simulated keypad.
+# Select the Balance require section “4”
+# Select Checking “1”
+
+Expected behavior:
+Account should the balance on the receipt of the Checking account. Log file should show inquiry transaction. 
+
+Actual behavior:
+No visual error seen on the screen. Saving account is shown with the saving account balance. Log file shows inquiry transaction. 
+
+Test Case: 34 of the listed tests",,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,,,,,0|i0002f:,,,Low,,,,,,,,,,,,In Progress,03/Feb/24 5:52 PM
+Balance Inquiry on Money Market Account ,SENG637A1-17,10016,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Low,Done,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,02/Feb/24 10:11 AM,04/Feb/24 10:07 AM,02/Feb/24 10:23 AM,02/Feb/24 10:11 AM,,,0,,,"The system after selecting Money Market proceeds to show an unknown error display. Following 500.00$ shows at the bottom of screen before showing the balance of the checking account.
+
+Initial state:
+The system asks the user for the account to inquire from, user selects “Money Market”
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter an incorrect PIN ‘42’ using the simulated keypad.
+# Select the Balance require section “4”
+# Select Money Market “2”
+
+Expected behavior:
+Then the receipt should show the money market account balance. Log file should show an inquiry transaction. 
+
+Actual behavior:
+Error seen on the screen. No visual indication that $500.00 is seen. Checking account shows account balance in the receipt. Log file shows success and that money was dispensed. 
+
+Test Case: 34 of the listed tests",,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Moderate / Limited,,,,0|i00027:,,,High,,,,,,,,,,,,Done,02/Feb/24 10:11 AM
+The system does not show the correct account names after money is transferred between accounts,SENG637A1-16,10015,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Medium,Done,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,31/Jan/24 2:23 PM,31/Jan/24 2:24 PM,02/Feb/24 10:23 AM,31/Jan/24 2:23 PM,,,0,,,"After money is transferred from checking to saving, the ATM displays “TRANSFER FROM: SVGS TO: CHKG”.
+
+Initial state:
+After a successful transfer of funds.
+
+Steps to reproduce:
+
+# Ensure the ATM is turned on and loaded.
+# Select “Click to insert card” button.
+# Input card number “1” and press Enter or Return on your keyboard.
+# Enter the PIN “42” using the ATM keyboard.
+# Select transaction type: “3) Transfer”.
+# Select the account to transfer from: “1) Checking”.
+# Select the account to transfer to: “2) Savings”.
+# Enter the amount to transfer: “5.00”.
+# Press enter on the keypad.
+
+Expected behavior:
+The ATM machine should display “TRANSFER FROM: CHKG TO: SVGS”.
+
+Actual behavior:
+The ATM machine displays “TRANSFER FROM: SVGS TO: CHKG”.",,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.1,,Extensive / Widespread,,,,0|i0001z:,,,Low,,,,,,,,,,,,Done,31/Jan/24 2:23 PM
+System does not transfer the accurate funds between accounts,SENG637A1-15,10014,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Highest,Done,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,31/Jan/24 12:03 AM,31/Jan/24 12:03 AM,02/Feb/24 10:23 AM,31/Jan/24 12:03 AM,,,0,,,"The ATM machine does not accurately display the amount transferred between accounts. 
+
+Initial state:
+The system is displaying a request for the user to enter a valid dollar amount.
+
+Steps to Reproduce:
+
+# Ensure the ATM is turned on and loaded.
+# Select “Click to insert card” button.
+# Input card number “1” and press Enter or Return on your keyboard.
+# Enter the PIN “42” using the ATM keyboard.
+# Select transaction type: “3) Transfer”.
+# Select the account to transfer from: “1) Checking”.
+# Select the account to transfer to: “2) Savings”.
+# Enter the amount to transfer: “5.00”.
+# Press enter on the keypad.
+
+Expected behavior:
+The print display should show an amount of $5.00 being transferred from chequing to savings.
+
+Actual behavior:
+The print display shows an amount of $4.50 being transferred.",,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Extensive / Widespread,,,,0|i0001r:,,,High,,,,,,,,,,,,Done,31/Jan/24 12:03 AM
+Logging into card number 1 shows 3 accounts instead of 2,SENG637A1-14,10013,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,High,Done,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,30/Jan/24 11:12 PM,30/Jan/24 11:12 PM,05/Feb/24 10:01 AM,30/Jan/24 11:12 PM,,,0,,,"After logging into card #1, the available accounts are: checking, saving, and money market.
+
+Initial state: 
+
+The system is logged into card #1.
+
+Steps to reproduce: 
+
+# Ensure the ATM is turned on and loaded.
+# Select “Click to insert card” button.
+# Input card number “1” and press Enter or Return on your keyboard.
+# Enter the PIN “42” using the ATM keyboard.
+# Selecting “Withdrawal”, “Deposit”, or “Transfer” will display 3 available accounts (checking, saving, and money market)
+
+Expected behavior:
+
+Only the accounts checking, and saving should be displayed.
+
+Actual behavior:
+
+Three accounts are displayed (checking, saving, and money market).",,alton wong,712020:58110136-619d-443b-aa44-6bdc81ad7973,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Extensive / Widespread,,,,0|i0001j:,,,Medium,,,,,,,,,,,,Done,30/Jan/24 11:12 PM
+Spelling Error in Display Screen Prompt,SENG637A1-13,10012,Bug,Resolved,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Lowest,,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,30/Jan/24 1:22 PM,04/Feb/24 5:38 PM,04/Feb/24 5:38 PM,,ATM System - Lab 1 Version 1.1,,0,,,"When cancelling a transaction, the text says “Wood” instead of “Would”
+
+Initial state:
+The system has finished processing a deposit from the user.
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter the PIN ‘42’ using the simulated keypad.
+# Select the deposit option by clicking ‘2’ on the simulated keypad.
+# Choose to transfer to savings by clicking ‘2’ again on the simulated keypad.
+# Enter the transaction amount of $20.00 on the simulated keypad.
+# Insert an envelope by clicking the “Click to insert envelope” button.
+
+Expected behavior:
+The text should read “Would you like to do another transaction?”
+
+Actual behavior:
+The text reads “Wood you like to do another transaction?”",,,,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Moderate / Limited,,,,0|i0001b:,,,Low,,,,,,,,,,,,In Progress,02/Feb/24 10:22 AM
+Account 1 and 2 share the same balance info,SENG637A1-12,10011,Bug,In Progress,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Highest,,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,30/Jan/24 1:19 PM,02/Feb/24 10:22 AM,02/Feb/24 11:12 AM,,,,0,,,"Account 1 (with PIN 42), and account 2 (with PIN 1234) are linked to the same account balances. So depositing in one shows a balance increase in both accounts.
+
+Initial state:
+The system received an envelope from a user.
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter the PIN ‘42’ using the simulated keypad.
+# Select the deposit option by clicking ‘2’ on the simulated keypad.
+# Choose to transfer to savings by clicking ‘2’ again on the simulated keypad.
+# Enter the transaction amount of $20.00 on the simulated keypad.
+# Insert an envelope by clicking the “Click to insert envelope” button.
+# Conclude the session by pressing ‘2’ on the keypad.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘2’ and press Enter on your keyboard.
+# Enter the PIN ‘1234’ using the simulated keypad.
+# Select the balance inquiry option by clicking ‘4’ on the simulated keypad.
+
+Expected behavior:
+The value in the account should be $100 in checking for account 2 since nothing has been deposited.
+
+Actual behavior:
+The value in account 2 matches the value in account 1. The increase of $20 to account 1 is reflected in account 2 as well.",,,,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Extensive / Widespread,,,,0|i00013:,,,Critical,,,,,,,,,,,,In Progress,02/Feb/24 10:22 AM
+Deposit Removes $10 From Checking/Savings Account,SENG637A1-11,10010,Bug,Resolved,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Highest,,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,Benjamin Reid,712020:a28e6cf9-c170-4cd0-b2ce-b9237dc575ff,30/Jan/24 1:11 PM,02/Feb/24 10:22 AM,02/Feb/24 10:24 AM,,ATM System - Lab 1 Version 1.1,,0,,,"When a user deposits money into their checking or savings account, $10 is removed. 
+
+Initial state:
+The user has deposited money into the ATM.
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter the PIN ‘42’ using the simulated keypad.
+# Select the deposit option by clicking ‘2’ on the simulated keypad.
+# Choose to transfer to savings by clicking ‘2’ again on the simulated keypad.
+# Enter the transaction amount of $20.00 on the simulated keypad.
+# Insert an envelope by clicking the “Click to insert envelope” button.
+
+Expected behavior:
+The updated balance should be the old balance plus the transaction value, minus a fee of $0.10.
+
+Actual behavior:
+The updated balance is the old balance plus the transaction value, minus a fee of $10. If a user deposits less than $10 they will be losing money.",,,,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Extensive / Widespread,,,,0|i0000v:,,,Critical,,,,,,,,,,,,In Progress,02/Feb/24 10:22 AM
+System asks user to enter pin twice after failed attempt,SENG637A1-5,10004,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,High,Done,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Christian Valdez,70121:6dc061a8-bb26-4774-8484-36a0d41a8a27,Christian Valdez,70121:6dc061a8-bb26-4774-8484-36a0d41a8a27,29/Jan/24 4:06 PM,03/Feb/24 9:44 AM,30/Jan/24 1:08 PM,29/Jan/24 4:11 PM,ATM System - Lab 1 Version 1.0,,0,pin,,"The system asks the user to enter a pin twice after an incorrect pin.
+
+Initial state:
+The system asks the user to enter the correct pin.
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter an incorrect PIN ‘6969’ using the simulated keypad.
+# Enter the correct PIN ‘42’ using the simulated keypad.
+# Enter the correct PIN ‘42’ for the second time using the simulated keypad.
+
+Expected behaviour:
+After entering the correct PIN, I should see the transaction type dialogue.
+
+Actual behaviour:
+The system asks me to enter my PIN twice with different dialogues. Entering an incorrect pin 1/2 times will result in an invalid pin.",,Christian Valdez,70121:6dc061a8-bb26-4774-8484-36a0d41a8a27,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,,Moderate / Limited,,,,0|i0000n:,,,Medium,,,,,,,,,,,,Done,29/Jan/24 4:11 PM
+Printer display does not clear after session or by turningoff ATM,SENG637A1-3,10002,Bug,Needs Review,SENG637A1,SENG 637 Bug Tracking - (A1),software,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,,Highest,Done,Braden Tink,712020:eee6899a-a509-4f17-b31e-e2510927dc88,Christian Valdez,70121:6dc061a8-bb26-4774-8484-36a0d41a8a27,Christian Valdez,70121:6dc061a8-bb26-4774-8484-36a0d41a8a27,27/Jan/24 11:16 AM,29/Jan/24 2:12 PM,02/Feb/24 10:04 AM,27/Jan/24 11:18 AM,ATM System - Lab 1 Version 1.1,,0,printer-display,,"The simulated printer display does not clear after a user's card is removed upon transaction completion. Additionally, powering down the machine fails to clear the display.
+
+Initial state:
+The system received an envelope from a user.
+
+Steps to Reproduce:
+
+# Ensure the ATM is loaded and activated.
+# Insert a card by clicking the “Click to insert card” button.
+# Input the card number ‘1’ and press Enter on your keyboard.
+# Enter the PIN ‘42’ using the simulated keypad.
+# Select the deposit option by clicking ‘2’ on the simulated keypad.
+# Choose to transfer to savings by clicking ‘2’ again on the simulated keypad.
+# Enter the transaction amount of $20.00 on the simulated keypad.
+# Insert an envelope by clicking the “Click to insert envelope” button.
+# Conclude the session by pressing ‘2’ on the keypad.
+# Power off the ATM by clicking the ‘Off’ button.
+
+Expected behavior:
+The print display should clear after each session and also after the ATM is turned off.
+
+Actual behavior:
+The printer display remains unchanged after the session ends and also after the ATM is turned off.",,Christian Valdez,70121:6dc061a8-bb26-4774-8484-36a0d41a8a27,,,,,,,,,,,,,,,,,,,,,,ATM System - Lab 1 Version 1.0,1.0,Extensive / Widespread,,,,0|hzzzzr:,,3.0,Medium,,,,,,,,,,,,Done,27/Jan/24 11:18 AM
