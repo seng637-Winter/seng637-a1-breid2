@@ -56,22 +56,22 @@ System Testing: Conducted on the complete, integrated ATM system to evaluate the
 
 ## Test Logistics
 ### Who Will Test?
-Pair testing will be utilized for the testing of the ATM system. The following pairs will test their assigned functionality:
+Pair testing will be utilized for the testing of the ATM system. The following pairs will test all functionality.
 
-- Pair #1: 
-- Pair #2:
+- Pair #1: Benjamin Reid, Carissa Chung
+- Pair #2: Braden Tink Christian Valdez Alton Wong 
 
 | Pair # | Functionality |
 |---|---|
-| | System Startup |
-| | System Shutdown |
-| | Session |
-| | Transaction |
-| | Withdrawal |
-| | Deposit |
-| | Transfer |
-| | Inquiry |
-| | Invalid PIN Extension |
+|1,2 | System Startup |
+|1,2 | System Shutdown |
+|1,2 | Session |
+|1,2 | Transaction |
+|1,2 | Withdrawal |
+|1,2 | Deposit |
+|1,2 | Transfer |
+|1,2 | Inquiry |
+|1,2 | Invalid PIN Extension |
 
 # Comparison of exploratory and manual functional testing
 
